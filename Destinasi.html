@@ -17,102 +17,70 @@
         }
 	</style>
 	<style>
-		body {
-		  font-family: Arial;
-		  margin: 0;
-		}
-		
-		* {
-		  box-sizing: border-box;
-		}
-		
-		img {
-		  vertical-align: middle;
-		}
-		
-		/* Position the image container (needed to position the left and right arrows) */
-		.container {
-		  position: relative;
-		}
-		
-		/* Hide the images by default */
-		.mySlides {
-		  display: none;
-		}
-		
-		/* Add a pointer when hovering over the thumbnail images */
-		.cursor {
-		  cursor: pointer;
-		}
-		
-		/* Next & previous buttons */
-		.prev,
-		.next {
-		  cursor: pointer;
-		  position: absolute;
-		  top: 40%;
-		  width: auto;
-		  padding: 16px;
-		  margin-top: -50px;
-		  color: white;
-		  font-weight: bold;
-		  font-size: 20px;
-		  border-radius: 0 3px 3px 0;
-		  user-select: none;
-		  -webkit-user-select: none;
-		}
-		
-		/* Position the "next button" to the right */
-		.next {
-		  right: 0;
-		  border-radius: 3px 0 0 3px;
-		}
-		
-		/* On hover, add a black background color with a little bit see-through */
-		.prev:hover,
-		.next:hover {
-		  background-color: rgba(0, 0, 0, 0.8);
-		}
-		
-		/* Number text (1/3 etc) */
-		.numbertext {
-		  color: #f2f2f2;
-		  font-size: 12px;
-		  padding: 8px 12px;
-		  position: absolute;
-		  top: 0;
-		}
-		
-		/* Container for image text */
-		.caption-container {
-		  text-align: center;
-		  background-color: #222;
-		  padding: 2px 16px;
-		  color: white;
-		}
-		
-		.row:after {
-		  content: "";
-		  display: table;
-		  clear: both;
-		}
-		
-		/* Six columns side by side */
-		.column {
-		  float: left;
-		  width: 16.66%;
-		}
-		
-		/* Add a transparency effect for thumnbail images */
-		.demo {
-		  opacity: 0.6;
-		}
-		
-		.active,
-		.demo:hover {
-		  opacity: 1;
-		}
-		</style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          background-color: #f1f1f1;
+          padding: 20px;
+          font-family: Arial;
+        }
+        
+        /* Center website */
+        .main {
+          max-width: 1000px;
+          margin: auto;
+        }
+        
+        h1 {
+          font-size: 50px;
+          word-break: break-all;
+        }
+        
+        .row {
+          margin: 8px -16px;
+        }
+        
+        /* Add padding BETWEEN each column */
+        .row,
+        .row > .column {
+          padding: 8px;
+        }
+        
+        /* Create four equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 25%;
+        }
+        
+        /* Clear floats after rows */ 
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Content */
+        .content {
+          background-color: white;
+          padding: 10px;
+        }
+        
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+          .column {
+            width: 50%;
+          }
+        }
+        
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+          }
+        }
+        </style>
   </head>
   <body>
   <header>
@@ -137,8 +105,6 @@
 				<li class="nav-item">
 					<a class="nav-link" href="Kontak.html">Kontak</a>
 				 </li>
-					<i style="font-size:36px" class="fa mr-2">&#xf16a;</i>
-					<i style="font-size:36px" class="fa mr-2">&#xf16d;</i>
 			  </ul>
 			</div>
 		  </nav>
@@ -148,112 +114,83 @@
 		<section class="jumbotron-bg">
 			<div class="jumbotron warna-bg text-white">
 				<div class="container">
-					<h1 class="display-4">Selamat Datang di Seyahat</h1>
-					<p class="lead">Temukan kemudahan informasi tempat wisata, budaya, kuliner, kerajinan tradisional di Seyahat!</p>
-					<hr class="my-4">
-					<p>Temukan informasi wisata bersama Seyahat</p>
+					<h1 class="display-4">Destinasi</h1>
+					<p class="lead">Berbagai Destinasi di Kota Makassar</p>
 				 </div>
 			  </div>
 		</section>
 		  
   <!--Akhir Jumbotron-->
   <!--Awal Konten-->
-  <h2 style="text-align:center">Slideshow Gallery</h2>
-  <div class="container">
-	<div class="mySlides">
-		<div class="numbertext">1 / 8</div>
-		<img src="bandara.jpg" style="width:100%">
-	</div>
+<!-- MAIN (Center website) -->
+<div class="main">
 
-	<div class="mySlides">
-		<div class="numbertext">2 / 8</div>
-		<img src="losari.jpg" style="width:100%">
-	</div>
-
-	<div class="mySlides">
-		<div class="numbertext">3 / 8</div>
-		<img src="masjid.jpg" style="width:100%">
-	</div>
-		
-	<div class="mySlides">
-		<div class="numbertext">4 / 8</div>
-		<img src="Phinisi.jpg" style="width:100%">
-	</div>
-
-	<div class="mySlides">
-		<div class="numbertext">5 / 8</div>
-		<img src="Rotterdam.jpg" style="width:100%">
-	</div>
-		
-	<div class="mySlides">
-		<div class="numbertext">6 / 8</div>
-		<img src="tongkonan.jpg" style="width:100%">
-	</div>
-
-	<div class="mySlides">
-		<div class="numbertext">7 / 8</div>
-		<img src="Bira.jpg" style="width:100%">
-	</div>
-	
-	<div class="mySlides">
-		<div class="numbertext">8 / 8</div>
-		<img src="samalona.jpg" style="width:100%">
-	</div>
-		
-	<a class="prev" onclick="plusSlides(-1)">❮</a>
-	<a class="next" onclick="plusSlides(1)">❯</a>
-
-	<div class="caption-container">
-		<p id="caption"></p>
-	</div>
-
-	<div class="row">
-		<div class="column">
-		<img class="demo cursor" src="bandara.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-		</div>
-		<div class="column">
-		<img class="demo cursor" src="losari.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-		</div>
-		<div class="column">
-		<img class="demo cursor" src="masjid.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-		</div>
-		<div class="column">
-		<img class="demo cursor" src="Phinisi.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-		</div>
-		<div class="column">
-		<img class="demo cursor" src="Rotterdam.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-		</div>    
-		<div class="column">
-		<img class="demo cursor" src="tongkonan.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-		</div>
-		<div class="column">
-		<img class="demo cursor" src="Bira.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-		</div>
-		<div class="column">
-		<img class="demo cursor" src="samalona.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-		</div>
-	</div>
-	</div>
+    <h1>Kota Makassar/h1>
+    <hr>
+    
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="bandara.jpg" alt="Bandara Sultan Hasanuddin" style="width:100%">
+          <h3>Bandara Sultan Hasanuddin</h3>
+          <h2><p><a href="https://youtu.be/CcbP2ZIU2eU">Tentang Lainnya </a></p></h2>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="losari.jpg" alt="Pantai Losari" style="width:100%">
+          <h3>Pantai Losari</h3>
+          <h2><p><a href="https://youtu.be/tKICBQAkTLU">Tentang Lainnya</a><p></h2>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="masjid.jpg" alt="Masjid 99 Kubah" style="width:100%">
+          <h3>Masjid 99 Kubah</h3>
+          <h2><p><a href="https://youtu.be/tKICBQAkTLU">Tentang Lainnya/a><p></h2>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="Phinisi.jpg" alt="Perahu Phinisi" style="width:100%">
+          <h3>Perahu Phinisi</h3>
+          <h2><p><a href="https://youtu.be/tfG3heiIeY8">Tentang Lainnya</a></p></h2>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="Rotterdam.jpg" alt="Benteng Totterdam" style="width:100%">
+          <h3>Benteng Totterdam</h3>
+          <h2><p><a href="https://youtu.be/FuBRdrCyaKs">Tentang Lainnya</a></p></h2>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="tongkonan.jpg" alt="Rumah Adat Tongkonan Toraja" style="width:100%">
+          <h3>Rumah Adat Tongkonan Toraja</h3>
+          <h2><p><a href="https://youtu.be/6HnaiEXG3U8">Tentang Lainnya</a></p></h2>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="Bira.jpg" alt="Pantai Bira Bulukumba" style="width:100%">
+          <h3>Pantai Bira Bulukumba</h3>
+          <h2><p><a href="https://youtu.be/WfkYUpCQnFA">Tentang Lainnya/a></p></h2>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="samalona.jpg" alt="Pantai Samalona" style="width:100%">
+          <h3>Pantai Samalona</h3>
+          <h2><p><a href="https://youtu.be/ipLS_CcIf68">Tentang Lainnya</a></p></h2>
+        </div>
+      </div>
+    <!-- END GRID -->
+    </div>
+    <!-- END MAIN -->
+    </div>
   <!--Akhir Konten-->
-  <!--Awal Pagination-->
-	<nav aria-label="Page navigation example">
-		<ul class="pagination justify-content-center">
-		<li class="page-item">
-			<a class="page-link" href="#" aria-label="Previous">
-			<span aria-hidden="true">&laquo;</span>
-			</a>
-		</li>
-		<li class="page-item"><a class="page-link" href="index.html">1</a></li>
-		<li class="page-item"><a class="page-link" href="Destination.html">2</a></li>
-		<li class="page-item"><a class="page-link" href="Profil.html">3</a></li>
-		<li class="page-item">
-			<a class="page-link" href="#" aria-label="Next">
-			<span aria-hidden="true">&raquo;</span>
-			</a>
-		</li>
-		</ul>
-	</nav>
-  <!--Akhir Pagination-->
   <!--Awal Footer-->
   <footer class="warna-bg">
 	  <div class="text-white text-center pt-3 pb-3">
@@ -269,36 +206,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	
 	<!--Awal Function Javascript-->
-  	<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
+  	
 	<!--Akhir Function Javascript-->
   </body>
 </html>
